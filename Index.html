@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gandiô Administrator | Design Thinking</title>
+    <!-- CSS do Bootstrap via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+    <!-- Meu css -->
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+<a class="visually-hidden-focusable skip-link" href="#home">Pular para o conteúdo</a>
+
+<!-- Recursos de acessibilidade do site -->
+<div class="barra-acessibilidade" role="group" aria-label="Recursos de acessibilidade">
+    <button type="button" id="btnFonteMenos" class="btn btn-sm btn-light" aria-label="Diminuir texto">A-</button>
+    <button type="button" id="btnFonteMais" class="btn btn-sm btn-light" aria-label="Aumentar texto">A+</button>
+    <button type="button" id="btnContraste" class="btn btn-sm btn-light" aria-pressed="false" aria-label="Alto contraste"><i class="bi bi-circle-half"></i></button>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#home"><i class="bi bi-piggy-bank-fill"></i> Gandiô</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-label="Abrir menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#empatia">Empatia</a></li>
+                <li class="nav-item"><a class="nav-link" href="#definicao">Definição</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ideacao">Ideação</a></li>
+                <li class="nav-item"><a class="nav-link" href="#prototipacao">Protótipos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#teste">Teste</a></li>
+                <li class="nav-item"><a class="nav-link" href="#acessibilidade">Acessibilidade</a></li>
+                <li class="nav-item"><a class="nav-link" href="#final">Considerações</a></li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-light btn-sm ms-lg-3 mt-2 mt-lg-0" id="btnTema">
+                        <i class="bi bi-moon-stars-fill"></i> Tema
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="py-5 mt-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <p class="text-muted mb-2">Design de Interface Humano-Computador · IFPR Campus Palmas · Profa. Andreia Marini</p>
+            <h1 class="display-3 fw-bold titulo">Gandiô Administrator</h1>
+            <p class="lead text-muted mx-auto limite">Um aplicativo simples para jovens e adultos organizarem o dinheiro, quitarem dívidas e realizarem sonhos.</p>
+            <a class="btn btn-gandio btn-lg mt-3" href="https://miro.com/app/board/uXjVG20dYFU=/?share_link_id=323508754881" target="_blank" rel="noopener">
+                <i class="bi bi-easel2-fill"></i> Abrir quadro no Miro
+            </a>
+        </div>
+
+        <h2 class="h4 fw-bold text-center mb-3">O processo de Design Thinking</h2>
+        <p class="text-center text-muted mx-auto limite">Este projeto seguiu o processo do Instituto de Design de Stanford (d.school): empatizar, definir, idealizar, criar protótipos e testar.</p>
+        <figure class="text-center">
+            <img src="img/processo-design-thinking.png" class="img-fluid rounded shadow-sm zoom" alt="Diagrama do processo de Design Thinking com as etapas Empatize, Defina, Idealizar, Crie protótipos e Teste">
+            <figcaption class="text-muted small mt-2">Processo de Design Thinking, d.school de Stanford.</figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- ETAPA 1 -->
+<section id="empatia" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-2 fw-bold"><i class="bi bi-heart-fill etapa-icone"></i> Etapa 1: Empatia</h2>
+        <p class="text-center text-muted mb-5">Escolha do problema e entendimento de quem vai usar o aplicativo.</p>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="h5 fw-bold">Tema</h3>
+                        <p class="card-text">Gasto excessivo de jovens e adultos.</p>
+                        <h3 class="h5 fw-bold mt-4">Problema</h3>
+                        <p class="card-text">Muitos jovens e adultos não conseguem se organizar financeiramente. Acabam não guardando dinheiro e, muitas vezes, não conseguem pagar as dívidas, o que impede a evolução da vida financeira.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm destaque">
+                    <div class="card-body p-4">
+                        <h3 class="h5 fw-bold">Como poderíamos... (HMW)</h3>
+                        <p class="card-text fs-5">Como poderíamos criar uma aplicação simples e objetiva para resolver o problema de gerir recursos financeiros de jovens e adultos?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body p-4">
+                <h3 class="h5 fw-bold">Como e por que as pessoas usam tecnologia para resolver esse problema?</h3>
+                <p class="card-text">As pessoas não param para buscar soluções de como lidar com o dinheiro para pagar dívidas ou economizar. Às vezes por falta de tempo, por não pensar no futuro ou por não achar uma forma, já que falta dinheiro.</p>
+                <p class="card-text mb-0">O Gandiô faz o usuário interagir de forma simples e eficaz. O aplicativo pede a renda mensal e, quando entra um dinheiro extra, ele também é adicionado. Depois pede as contas pendentes, os sonhos, as metas e quanto a pessoa quer juntar. Com isso, faz um diagnóstico e traz dicas de como gerir o dinheiro: quanto tempo levará para alcançar o objetivo, quanto economizar, quanto vai sobrar no mês e por que ter uma reserva. A cada renda extra, os resultados mudam.</p>
+            </div>
+        </div>
+
+        <h3 class="h4 fw-bold mt-5 mb-3">Análise dos usuários</h3>
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm"><div class="card-body text-center p-4">
+                    <i class="bi bi-person-fill"></i>
+                    <h4 class="h5 card-title">Primário</h4>
+                    <p class="card-text text-muted">Uso regular. Pessoas que têm dificuldade em gerenciar o próprio dinheiro.</p>
+                </div></div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm"><div class="card-body text-center p-4">
+                    <i class="bi bi-bullseye"></i>
+                    <h4 class="h5 card-title">Secundário</h4>
+                    <p class="card-text text-muted">Uso esporádico. Pessoas que querem apenas juntar dinheiro para um fim específico.</p>
+                </div></div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm"><div class="card-body text-center p-4">
+                    <i class="bi bi-star-fill"></i>
+                    <h4 class="h5 card-title">Terciário</h4>
+                    <p class="card-text text-muted">Afetado pelo sistema. Usuários experientes que já usam outras ferramentas e podem emitir avaliações.</p>
+                </div></div>
+            </div>
+        </div>
+
+        <h3 class="h4 fw-bold mb-3">Contexto e acessibilidade</h3>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm"><div class="card-body p-4">
+                    <h4 class="h6 fw-bold"><i class="bi bi-universal-access-circle"></i> Limitações possíveis</h4>
+                    <p class="card-text mb-0">Cegueira, daltonismo e dificuldade para clicar nos botões.</p>
+                </div></div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm"><div class="card-body p-4">
+                    <h4 class="h6 fw-bold"><i class="bi bi-house-door-fill"></i> Ambiente de uso</h4>
+                    <p class="card-text mb-0">Em casa, para as finanças pessoais, e no trabalho, para ajudar a empresa.</p>
+                </div></div>
+            </div>
+        </div>
+
+        <h3 class="h4 fw-bold mb-2">Pesquisa com usuários: mapa de empatia</h3>
+        <p class="text-muted">O mapa de empatia reúne o que o jovem e adulto consumista (18 a 35 anos) pensa, sente, ouve, vê, fala e faz, além de suas dores e necessidades.</p>
+        <figure class="text-center">
+            <img src="img/mapa-empatia.png" class="img-fluid rounded shadow-sm zoom" alt="Mapa de empatia do jovem e adulto consumista, de 18 a 35 anos">
+            <figcaption class="text-muted small mt-2">Mapa de empatia. Clique na imagem para ampliar.</figcaption>
+        </figure>
+        <div class="row g-4 mt-1">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm"><div class="card-body p-4">
+                    <h4 class="h6 fw-bold">Dores</h4>
+                    <p class="card-text mb-0">Dificuldade de guardar dinheiro, culpa após gastar, medo de não conseguir pagar as contas, endividamento, falta de controle financeiro e ansiedade com dinheiro.</p>
+                </div></div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm"><div class="card-body p-4">
+                    <h4 class="h6 fw-bold">Necessidades</h4>
+                    <p class="card-text mb-0">Planejamento financeiro, segurança e estabilidade no futuro, consumo mais consciente, educação financeira, controle dos gastos e aprender a diferenciar desejo de necessidade.</p>
+                </div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ETAPA 2 -->
+<section id="definicao" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-2 fw-bold"><i class="bi bi-compass-fill etapa-icone"></i> Etapa 2: Definição</h2>
+        <p class="text-center text-muted mb-5">Objetivo, Matriz CSD, problema a resolver e personas.</p>
+
+        <h3 class="h4 fw-bold mb-2">Objetivo e Matriz CSD</h3>
+        <p class="text-muted">A Matriz CSD separa o que já sabemos (certezas), o que acreditamos (suposições) e o que ainda precisamos descobrir (dúvidas).</p>
+        <figure class="text-center">
+            <img src="img/matriz-csd.png" class="img-fluid rounded shadow-sm zoom" alt="Matriz CSD com certezas, suposições e dúvidas sobre gastos excessivos">
+            <figcaption class="text-muted small mt-2">Matriz CSD. Clique na imagem para ampliar.</figcaption>
+        </figure>
+
+        <h3 class="h4 fw-bold mt-5 mb-3">Definição do problema</h3>
+        <div class="card shadow-sm destaque mb-5">
+            <div class="card-body p-4">
+                <p class="card-text fs-5 mb-0">Gasto excessivo de jovens e adultos. Fazer um aplicativo com instruções, conscientização e controle de gastos para uma melhor gestão do dinheiro.</p>
+            </div>
+        </div>
+
+        <h3 class="h4 fw-bold mb-2">Personas</h3>
+        <p class="text-muted">Três pessoas representam quem pode usar um aplicativo simples de organização: Mariana, Carlos Henrique e Ana Clara.</p>
+        <figure class="text-center">
+            <img src="img/personas.png" class="img-fluid rounded shadow-sm zoom" alt="Três personas: Mariana Souza, Carlos Henrique e Ana Clara">
+            <figcaption class="text-muted small mt-2">Personas. Clique na imagem para ampliar.</figcaption>
+        </figure>
+        <p class="text-muted fst-italic small">A jornada do usuário será adicionada aqui.</p>
+    </div>
+</section>
+
+<!-- ETAPA 3 -->
+<section id="ideacao" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-2 fw-bold"><i class="bi bi-lightbulb-fill etapa-icone"></i> Etapa 3: Ideação</h2>
+        <p class="text-center text-muted mb-5">Plano de ação, fluxo de tarefas e identificação das telas.</p>
+
+        <h3 class="h4 fw-bold mb-3">Crazy 8</h3>
+        
+        <figure class="text-center">
+            <img src="img/Crazy 8.jpeg" class="img-fluid rounded shadow-sm zoom" alt="Crazy 8" width="600px" height="800px" object-fit: fill>
+        </figure>
+
+        <h3 class="h4 fw-bold mb-2">Plano de ação</h3>
+        <p class="text-muted">Cinco perguntas-chave definiram o propósito do produto: que problema resolver, como, qual o diferencial, para quem e qual a proposta de valor.</p>
+        <figure class="text-center">
+            <img src="img/plano-acao.png" class="img-fluid rounded shadow-sm zoom" alt="Plano de ação com as respostas da equipe às cinco perguntas-chave">
+            <figcaption class="text-muted small mt-2">Plano de ação. Clique na imagem para ampliar.</figcaption>
+        </figure>
+        <div class="row g-4 mt-1 mb-5">
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm"><div class="card-body p-4">
+                    <h4 class="h6 fw-bold">Problema</h4>
+                    <p class="card-text small mb-0">Pessoas enroladas com as contas e apps financeiros complicados. Faltam opções fáceis para quem tem glaucoma, daltonismo ou dificuldade motora.</p>
+                </div></div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm"><div class="card-body p-4">
+                    <h4 class="h6 fw-bold">Diferenciais</h4>
+                    <p class="card-text small mb-0">Visual simples, acessibilidade no centro de tudo e alertas que ajudam a segurar os impulsos de gasto.</p>
+                </div></div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm"><div class="card-body p-4">
+                    <h4 class="h6 fw-bold">Para quem</h4>
+                    <p class="card-text small mb-0">Quem se perde no orçamento, quem quer juntar dinheiro para um sonho e pessoas com daltonismo, glaucoma ou limitações motoras.</p>
+                </div></div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm"><div class="card-body p-4">
+                    <h4 class="h6 fw-bold">Proposta de valor</h4>
+                    <p class="card-text small mb-0">Organização financeira prática, leve e ao alcance de qualquer pessoa, com clareza de para onde vai cada centavo.</p>
+                </div></div>
+            </div>
+        </div>
+
+<h3 class="h4 fw-bold mb-2">Fluxo de tarefas e identificação das telas</h3>
+<p class="text-muted">Cada necessidade do usuário virou uma funcionalidade, e cada funcionalidade foi atribuída a uma tela do aplicativo.</p>
+
+<div class="row g-4">
+    <!-- Necessidades e funcionalidades -->
+    <div class="col-lg-6">
+        <div class="table-responsive shadow-sm rounded">
+            <table class="table table-bordered table-striped align-middle mb-0">
+                <caption class="caption-top fw-bold">Necessidades e como o sistema atende</caption>
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">O que o usuário precisa fazer? (Necessidade)</th>
+                        <th scope="col">Como o sistema atende essa necessidade? (Funcionalidade)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Visualizar as propostas do site.</td><td>Tela que mostra as propostas e objetivos do site.</td></tr>
+                    <tr><td>Se cadastrar.</td><td>Tela de cadastro com os campos de e-mail, CPF, telefone, estado, cidade, idade, senha e confirmação de senha.</td></tr>
+                    <tr><td>Entrar na sua conta.</td><td>Tela de login com e-mail/CPF e senha.</td></tr>
+                    <tr><td>Saber se o usuário errou a senha, o CPF ou o e-mail.</td><td>Uma mensagem em vermelho avisando qual campo está errado.</td></tr>
+                    <tr><td>Registrar o salário ou ganho fixo mensal de forma rápida.</td><td>Um campo simples e direto na tela inicial para inserir o valor base recebido no mês.</td></tr>
+                    <tr><td>Adicionar valores inesperados (como bônus) e ver o impacto imediato.</td><td>Uma opção para adicionar valores inesperados e atualizar automaticamente no orçamento.</td></tr>
+                    <tr><td>Controlar as dívidas e contas do mês para não esquecer de pagar.</td><td>Aba que lista as despesas com campos para valor e data de vencimento, gerando a soma do total de dívidas.</td></tr>
+                    <tr><td>Definir objetivos financeiros (ex.: comprar um celular, fazer uma viagem).</td><td>Espaço para cadastrar o nome do objetivo e o valor total necessário, mostrando o progresso.</td></tr>
+                    <tr><td>Colocar uma quantia mensal fixa que deseja guardar para o futuro.</td><td>Campo específico para o usuário registrar o valor que quer economizar mensalmente.</td></tr>
+                    <tr><td>Saber quando vai conseguir alcançar o sonho ou a meta desejada.</td><td>Calcular o valor do sonho pela economia mensal (e rendas extras), exibindo o prazo previsto em meses para a conquista.</td></tr>
+                    <tr><td>Ser alertado e conscientizado sobre a importância de ter um dinheiro guardado para imprevistos.</td><td>Uma seção que calcula automaticamente o valor ideal para a reserva do usuário (baseado nos gastos fixos dele) e incentiva esse hábito.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Telas e funcionalidades -->
+    <div class="col-lg-6">
+        <div class="table-responsive shadow-sm rounded">
+            <table class="table table-bordered table-striped align-middle mb-0">
+                <caption class="caption-top fw-bold">Identificação das telas do aplicativo</caption>
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Nome de identificação da tela</th>
+                        <th scope="col">Funcionalidades contidas nesta tela</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Tela de Apresentação</th><td>Telas interativas e chamativas, mostrando como trabalhamos, importância e acesso ao login/criar conta.</td></tr>
+                    <tr><th scope="row">Tela de Cadastro de Usuário</th><td>Formulário de criação de conta com os campos obrigatórios: e-mail, CPF, telefone, estado, cidade, idade, senha e confirmação de senha.</td></tr>
+                    <tr><th scope="row">Tela de Login</th><td>Campos de identificação por e-mail/CPF e senha. Se estiver errado, mostra em vermelho.</td></tr>
+                    <tr><th scope="row">Tela Inicial</th><td>Campo simples e direto na interface para registrar o salário ou ganho fixo mensal de forma rápida. Mostra o resumo do orçamento atualizado em tempo real.</td></tr>
+                    <tr><th scope="row">Tela de Registros de Rendas Extras</th><td>Opção para adicionar valores inesperados (como bônus), com atualização automática imediata no orçamento geral.</td></tr>
+                    <tr><th scope="row">Tela de Controle de Dívidas</th><td>Listagem detalhada de todas as despesas e contas do mês. Campos para o valor da conta e a data de vencimento. Soma automaticamente e exibe o total das dívidas acumuladas.</td></tr>
+                    <tr><th scope="row">Tela para Definir Objetivos Financeiros</th><td>Espaço para cadastrar metas financeiras, informando o nome do objetivo e o valor total necessário. Exibição gráfica e percentual do progresso de cada meta.</td></tr>
+                    <tr><th scope="row">Tela de Simulador de Prazos</th><td>Sistema que calcula o valor do sonho junto com a economia mensal e as rendas extras cadastradas. Exibição clara do prazo previsto para a conquista final da meta.</td></tr>
+                    <tr><th scope="row">Tela de Planejamento de Economia</th><td>Campo específico para o usuário registrar a quantia mensal fixa que deseja guardar para o futuro.</td></tr>
+                    <tr><th scope="row">Tela de Reserva de Emergência</th><td>Seção que calcula automaticamente o valor ideal da reserva financeira com base nos gastos fixos informados, junto com um bloco de texto educativo e alertas de conscientização sobre a importância de manter esse hábito.</td></tr>
+                    <tr><th scope="row">Tela de Diagnóstico e Dicas</th><td>Painel que exibe o diagnóstico completo da saúde financeira do usuário, mostrando em detalhes quanto vai sobrar no mês, com dicas automatizadas sobre como gerir melhor o dinheiro.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+<!-- ETAPA 4 -->
+<section id="prototipacao" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-2 fw-bold"><i class="bi bi-phone-fill etapa-icone"></i> Etapa 4: Prototipação</h2>
+        <p class="text-center text-muted mb-4">Protótipo de média fidelidade do Gandiô Administrator, criado a partir das telas definidas na ideação.</p>
+        <div class="text-center mb-5">
+            <a class="btn btn-gandio btn-lg" href="https://stitch.google.com/preview/14986671889730010358?node-id=5919a295f59e42d7b95368f9a5e60c91" target="_blank" rel="noopener">
+                <i class="bi bi-box-arrow-up-right"></i> Abrir protótipo
+            </a>
+        </div>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="tela-moldura"><img src="img/tela-apresentacao.png" class="zoom" alt="Protótipo da tela Tela de Apresentação"></div>
+                    <div class="card-body p-3">
+                        <h4 class="h6 fw-bold mb-1">1. Tela de Apresentação</h4>
+                        <p class="card-text small text-muted mb-0">Mostra a proposta do app e leva ao login ou ao cadastro.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="tela-moldura"><img src="img/tela-cadastro.png" class="zoom" alt="Protótipo da tela Cadastro de Usuário"></div>
+                    <div class="card-body p-3">
+                        <h4 class="h6 fw-bold mb-1">2. Cadastro de Usuário</h4>
+                        <p class="card-text small text-muted mb-0">Formulário em 3 passos com os dados básicos da conta.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="tela-moldura"><img src="img/tela-login.png" class="zoom" alt="Protótipo da tela Login"></div>
+                    <div class="card-body p-3">
+                        <h4 class="h6 fw-bold mb-1">3. Login</h4>
+                        <p class="card-text small text-muted mb-0">Entrada por e-mail ou CPF. O erro aparece em vermelho.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="tela-moldura"><img src="img/tela-diagnostico.png" class="zoom" alt="Protótipo da tela Tela Inicial / Diagnóstico"></div>
+                    <div class="card-body p-3">
+                        <h4 class="h6 fw-bold mb-1">4. Tela Inicial / Diagnóstico</h4>
+                        <p class="card-text small text-muted mb-0">Saldo do mês, dívidas, economia e registro rápido da renda.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="tela-moldura"><img src="img/tela-renda-extra.png" class="zoom" alt="Protótipo da tela Renda Extra"></div>
+                    <div class="card-body p-3">
+                        <h4 class="h6 fw-bold mb-1">5. Renda Extra</h4>
+                        <p class="card-text small text-muted mb-0">Registra valores inesperados e mostra o impacto no orçamento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="tela-moldura"><img src="img/tela-dividas.png" class="zoom" alt="Protótipo da tela Controle de Dívidas"></div>
+                    <div class="card-body p-3">
+                        <h4 class="h6 fw-bold mb-1">6. Controle de Dívidas</h4>
+                        <p class="card-text small text-muted mb-0">Lista de contas com valor, vencimento e total em aberto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="tela-moldura"><img src="img/tela-metas.png" class="zoom" alt="Protótipo da tela Sonhos e Metas"></div>
+                    <div class="card-body p-3">
+                        <h4 class="h6 fw-bold mb-1">7. Sonhos e Metas</h4>
+                        <p class="card-text small text-muted mb-0">Cadastro de objetivos com o progresso de cada meta.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="tela-moldura"><img src="img/tela-economia.png" class="zoom" alt="Protótipo da tela Planejamento de Economia"></div>
+                    <div class="card-body p-3">
+                        <h4 class="h6 fw-bold mb-1">8. Planejamento de Economia</h4>
+                        <p class="card-text small text-muted mb-0">Quanto guardar por mês, com a regra 50-30-20.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="tela-moldura"><img src="img/tela-simulador.png" class="zoom" alt="Protótipo da tela Simulador de Prazos"></div>
+                    <div class="card-body p-3">
+                        <h4 class="h6 fw-bold mb-1">9. Simulador de Prazos</h4>
+                        <p class="card-text small text-muted mb-0">Calcula em quantos meses o sonho é conquistado.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="tela-moldura"><img src="img/tela-reserva.png" class="zoom" alt="Protótipo da tela Reserva de Emergência"></div>
+                    <div class="card-body p-3">
+                        <h4 class="h6 fw-bold mb-1">10. Reserva de Emergência</h4>
+                        <p class="card-text small text-muted mb-0">Valor ideal da reserva com base nos gastos fixos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="tela-moldura"><img src="img/tela-perfil-acessibilidade.png" class="zoom" alt="Protótipo da tela Perfil e Acessibilidade"></div>
+                    <div class="card-body p-3">
+                        <h4 class="h6 fw-bold mb-1">11. Perfil e Acessibilidade</h4>
+                        <p class="card-text small text-muted mb-0">Tamanho da fonte, alto contraste e navegação por voz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-muted small mt-4">Clique em uma tela para ampliar.</p>
+    </div>
+</section>
+
+<!-- ETAPA 5 -->
+<section id="teste" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-2 fw-bold"><i class="bi bi-clipboard-check-fill etapa-icone"></i> Etapa 5: Teste</h2>
+        <p class="text-center text-muted mb-5">Teste de usabilidade com o questionário SUS (System Usability Scale).</p>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm"><div class="card-body p-4">
+                    <h3 class="h5 fw-bold">Como foi o teste</h3>
+                    <p class="card-text">Os participantes usaram o protótipo e responderam ao questionário SUS, com 10 questões em escala de 1 a 5. O questionário foi aplicado pelo Google Forms.</p>
+                    <a class="btn btn-outline-gandio" href="https://docs.google.com/forms/d/e/1FAIpQLSdhJpERTKkZj5wLlDZHc8EhdpnAy4pN1vo2Yy5SFodQefSnKw/viewform?usp=sharing&amp;ouid=118435518579786793168" target="_blank" rel="noopener">
+                        <i class="bi bi-ui-checks"></i> Ver questionário
+                    </a>
+                </div></div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm destaque"><div class="card-body p-4 text-center">
+                    <h3 class="h5 fw-bold">Resultado do teste</h3>
+                    <p class="display-3 fw-bold mb-0 titulo">79,5</p>
+                    <p class="card-text mb-0">pontuação SUS média, de 0 a 100</p>
+                </div></div>
+            </div>
+        </div>
+
+        <figure class="text-center">
+            <img src="img/sus-resultado.png" class="img-fluid rounded shadow-sm zoom" alt="Planilha do System Usability Scale do Gandiô Administrator com as respostas dos usuários e o resultado 79,5">
+            <figcaption class="text-muted small mt-2">Planilha com as respostas e as pontuações SUS. Clique para ampliar.</figcaption>
+        </figure>
+
+        <h3 class="h4 fw-bold mt-5 mb-3">Análise dos resultados</h3>
+        <div class="card shadow-sm"><div class="card-body p-4">
+            <p class="card-text">A média SUS de 79,5 fica acima de 68, que é a média de referência para sistemas de software. Esse valor está na faixa considerada boa, o que indica que os usuários acharam o Gandiô fácil de aprender e de usar.</p>
+            <p class="card-text mb-0">As notas individuais variaram. Entre os participantes que aparecem na planilha, a menor foi 62,5 e a maior foi 95. Isso mostra que a maioria aprovou a interface, mas que ainda há pontos a melhorar para quem teve mais dificuldade.</p>
+        </div></div>
+    </div>
+</section>
+
+<section id="acessibilidade" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-2 fw-bold"><i class="bi bi-universal-access-circle etapa-icone"></i> Recursos de acessibilidade</h2>
+        <p class="text-center text-muted mb-5">Na empatia, identificamos cegueira, daltonismo e dificuldade motora. Por isso a acessibilidade está no centro do projeto.</p>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body p-4">
+                <h3 class="h6 fw-bold"><i class="bi bi-fonts"></i> Tamanho da fonte</h3>
+                <p class="card-text small mb-0">Botões A- e A+ no perfil aumentam ou diminuem o texto, reduzindo o esforço visual.</p>
+            </div></div></div>
+            <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body p-4">
+                <h3 class="h6 fw-bold"><i class="bi bi-circle-half"></i> Alto contraste</h3>
+                <p class="card-text small mb-0">Opção que reforça divisores e escurece o fundo, ajudando quem tem baixa visão ou daltonismo.</p>
+            </div></div></div>
+            <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body p-4">
+                <h3 class="h6 fw-bold"><i class="bi bi-mic-fill"></i> Navegação por voz e leitura</h3>
+                <p class="card-text small mb-0">O assistente de voz lê o diagnóstico em voz alta, com o botão "Tocar resumo" na tela inicial.</p>
+            </div></div></div>
+            <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body p-4">
+                <h3 class="h6 fw-bold"><i class="bi bi-hand-index-thumb-fill"></i> Botões grandes</h3>
+                <p class="card-text small mb-0">Botões amplos e fáceis de clicar para quem tem dificuldade motora.</p>
+            </div></div></div>
+            <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body p-4">
+                <h3 class="h6 fw-bold"><i class="bi bi-exclamation-octagon-fill"></i> Erros claros</h3>
+                <p class="card-text small mb-0">Mensagens de erro em vermelho, com ícone e texto, para não depender só da cor.</p>
+            </div></div></div>
+            <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body p-4">
+                <h3 class="h6 fw-bold"><i class="bi bi-shield-check"></i> WCAG 2.1 e LGPD</h3>
+                <p class="card-text small mb-0">As telas exibem os selos de conformidade com a WCAG 2.1 e com a LGPD.</p>
+            </div></div></div>
+        </div>
+        <p class="text-center text-muted small mt-4">Este site também tem recursos de acessibilidade: botões de tamanho do texto e de alto contraste no canto da tela, link para pular ao conteúdo e foco visível no teclado.</p>
+    </div>
+</section>
+
+<!-- CONSIDERAÇÕES -->
+<section id="final" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4 fw-bold"><i class="bi bi-flag-fill etapa-icone"></i> Considerações finais</h2>
+        <div class="card shadow-sm limite mx-auto"><div class="card-body p-4">
+            <p class="card-text">Neste trabalho percorri as cinco etapas do Design Thinking para criar o Gandiô Administrator, um aplicativo que ajuda jovens e adultos a organizar o dinheiro, controlar dívidas e planejar sonhos. Começar pela empatia me mostrou que o problema não é só falta de dinheiro, mas também falta de planejamento e de educação financeira.</p>
+            <p class="card-text">A Matriz CSD, as personas e o plano de ação me ajudaram a decidir o que o app precisava ter. O protótipo transformou essas ideias em telas, e o teste SUS, que deu 79,5, mostrou que a proposta é fácil de usar. A acessibilidade foi um ponto central desde o início.</p>
+            <p class="card-text mb-0">Aprendi que ouvir o usuário muda o projeto e que um bom design precisa ser simples para todas as pessoas. Como próximos passos, quero melhorar os pontos apontados no teste e continuar evoluindo o aplicativo.</p>
+        </div></div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <i class="bi bi-piggy-bank-fill"></i>
+        <p class="mb-1 fw-bold">Gandiô Administrator</p>
+        <p class="mb-0 small">Trabalho avaliativo de Design de Interface Humano-Computador · IFPR Campus Palmas · 2026</p>
+    </div>
+</footer>
+
+<!-- Janela para ampliar imagens -->
+<div class="modal fade" id="modalImagem" tabindex="-1" aria-label="Imagem ampliada">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="imagemAmpliada" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS do Bootstrap via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Meu JS -->
+<script src="JS.js"></script>
+</body>
+</html>

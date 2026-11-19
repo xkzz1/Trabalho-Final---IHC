@@ -1,0 +1,83 @@
+/* Cores do Gandiô (iguais às do protótipo) */
+:root {
+    --gandio-azul: #0b2a5b;
+    --gandio-amarelo: #f5c518;
+}
+
+html { scroll-behavior: smooth; }
+section { scroll-margin-top: 70px; }
+
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+.titulo, h1, h2 { font-family: "Bricolage Grotesque", system-ui, sans-serif; }
+.titulo { color: var(--gandio-azul); }
+.limite { max-width: 720px; }
+
+.etapa-icone { color: var(--gandio-azul); }
+
+.btn-gandio {
+    background-color: var(--gandio-azul);
+    border-color: var(--gandio-azul);
+    color: #fff;
+}
+.btn-gandio:hover, .btn-gandio:focus {
+    background-color: #07204a;
+    border-color: #07204a;
+    color: #fff;
+}
+.btn-outline-gandio {
+    border: 2px solid var(--gandio-azul);
+    color: var(--gandio-azul);
+    font-weight: 600;
+}
+.btn-outline-gandio:hover, .btn-outline-gandio:focus {
+    background-color: var(--gandio-azul);
+    color: #fff;
+}
+
+.card i.bi { font-size: 1.6rem; color: var(--gandio-azul); }
+.card h4 i.bi, .card h3 i.bi { font-size: 1.1rem; }
+.destaque { border-left: 6px solid var(--gandio-amarelo); }
+
+img.zoom { cursor: zoom-in; }
+
+/* Telas do protótipo */
+.tela-moldura {
+    height: 380px;
+    overflow: hidden;
+    background: #eef1f6;
+    display: flex;
+    justify-content: center;
+    border-radius: .375rem .375rem 0 0;
+}
+.tela-moldura img { height: 100%; width: auto; max-width: 100%; object-fit: cover; object-position: top; }
+
+/* Acessibilidade do site */
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 2000; background: #fff; padding: .5rem 1rem; }
+.barra-acessibilidade {
+    position: fixed; right: 12px; bottom: 12px; z-index: 1050;
+    display: flex; gap: 6px; padding: 6px;
+    background: var(--gandio-azul); border-radius: .5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+:focus-visible { outline: 3px solid var(--gandio-amarelo); outline-offset: 2px; }
+
+/* Tema escuro (botão Tema) */
+[data-bs-theme="dark"] .bg-light { background-color: #1a1d21 !important; }
+[data-bs-theme="dark"] .titulo, [data-bs-theme="dark"] .etapa-icone,
+[data-bs-theme="dark"] .card i.bi { color: var(--gandio-amarelo); }
+[data-bs-theme="dark"] .btn-outline-gandio { border-color: var(--gandio-amarelo); color: var(--gandio-amarelo); }
+[data-bs-theme="dark"] .btn-outline-gandio:hover { background: var(--gandio-amarelo); color: #000; }
+[data-bs-theme="dark"] .tela-moldura { background: #2b3036; }
+
+/* Alto contraste */
+body.alto-contraste { background: #000 !important; color: #fff !important; }
+body.alto-contraste section, body.alto-contraste .bg-light { background: #000 !important; }
+body.alto-contraste .card { background: #000 !important; color: #fff !important; border: 2px solid #fff !important; box-shadow: none !important; }
+body.alto-contraste .text-muted, body.alto-contraste .card-text { color: #fff !important; }
+body.alto-contraste .titulo, body.alto-contraste .etapa-icone, body.alto-contraste .card i.bi { color: var(--gandio-amarelo) !important; }
+body.alto-contraste .btn-gandio { background: var(--gandio-amarelo); border-color: var(--gandio-amarelo); color: #000; }
+body.alto-contraste .btn-outline-gandio { border-color: var(--gandio-amarelo); color: var(--gandio-amarelo); }
+body.alto-contraste a { color: var(--gandio-amarelo); }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
